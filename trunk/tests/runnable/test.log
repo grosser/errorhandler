@@ -1,0 +1,528 @@
+2007.09.08,14:23:th
+-->>Error type INFO<<--
+Non-static method SimpleTest::getContext() should not be called statically, assuming $this from incompatible context
+
+At: /home/data/micha/_LIB/simpletest/exceptions.php : 39
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 135
+---- invoke(string: test_add
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 588
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 591
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/errorhandler/tests/all_tests.php : 9
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/errorhandler/tests/runnable/error.php : 4
+---- run_html(- no arguments -)
+2007.09.08,14:23:th
+-->>Error type INFO<<--
+Non-static method SimpleTest::getContext() should not be called statically, assuming $this from incompatible context
+
+At: /home/data/micha/_LIB/simpletest/errors.php : 44
+Called from: /home/data/micha/_LIB/simpletest/invoker.php : 126
+---- invoke(string: test_add
+)
+Called from: /home/data/micha/_LIB/simpletest/exceptions.php : 42
+---- invoke(string: test_add
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 135
+---- invoke(string: test_add
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 588
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 591
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/errorhandler/tests/all_tests.php : 9
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/errorhandler/tests/runnable/error.php : 4
+---- run_html(- no arguments -)
+2007.09.08,14:24:th
+-->>Error type INFO<<--
+Non-static method SimpleTest::getContext() should not be called statically, assuming $this from incompatible context
+
+At: /home/data/micha/_LIB/simpletest/exceptions.php : 39
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 135
+---- invoke(string: test_add
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 588
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 591
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/errorhandler/tests/all_tests.php : 9
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/errorhandler/tests/runnable/error.php : 4
+---- run_html(- no arguments -)
+2007.09.08,14:24:th
+-->>Error type INFO<<--
+Non-static method SimpleTest::getContext() should not be called statically, assuming $this from incompatible context
+
+At: /home/data/micha/_LIB/simpletest/errors.php : 44
+Called from: /home/data/micha/_LIB/simpletest/invoker.php : 126
+---- invoke(string: test_add
+)
+Called from: /home/data/micha/_LIB/simpletest/exceptions.php : 42
+---- invoke(string: test_add
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 135
+---- invoke(string: test_add
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 588
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 591
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/errorhandler/tests/all_tests.php : 9
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/errorhandler/tests/runnable/error.php : 4
+---- run_html(- no arguments -)
+2007.09.08,14:24:th
+-->>Error type INFO<<--
+Non-static method SimpleTest::getContext() should not be called statically, assuming $this from incompatible context
+
+At: /home/data/micha/_LIB/simpletest/exceptions.php : 39
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 135
+---- invoke(string: test_add
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 588
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 591
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/errorhandler/tests/all_tests.php : 9
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/errorhandler/tests/runnable/error.php : 4
+---- run_html(- no arguments -)
+2007.09.08,14:24:th
+-->>Error type INFO<<--
+Non-static method SimpleTest::getContext() should not be called statically, assuming $this from incompatible context
+
+At: /home/data/micha/_LIB/simpletest/errors.php : 44
+Called from: /home/data/micha/_LIB/simpletest/invoker.php : 126
+---- invoke(string: test_add
+)
+Called from: /home/data/micha/_LIB/simpletest/exceptions.php : 42
+---- invoke(string: test_add
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 135
+---- invoke(string: test_add
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 588
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 591
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/errorhandler/tests/all_tests.php : 9
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/errorhandler/tests/runnable/error.php : 4
+---- run_html(- no arguments -)
+2007.09.08,14:25:th
+-->>Error type INFO<<--
+Non-static method SimpleTest::getContext() should not be called statically, assuming $this from incompatible context
+
+At: /home/data/micha/_LIB/simpletest/exceptions.php : 39
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 135
+---- invoke(string: test_add
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 588
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 591
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/errorhandler/tests/all_tests.php : 9
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/errorhandler/tests/runnable/error.php : 4
+---- run_html(- no arguments -)
+2007.09.08,14:25:th
+-->>Error type INFO<<--
+Non-static method SimpleTest::getContext() should not be called statically, assuming $this from incompatible context
+
+At: /home/data/micha/_LIB/simpletest/errors.php : 44
+Called from: /home/data/micha/_LIB/simpletest/invoker.php : 126
+---- invoke(string: test_add
+)
+Called from: /home/data/micha/_LIB/simpletest/exceptions.php : 42
+---- invoke(string: test_add
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 135
+---- invoke(string: test_add
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 588
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 591
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/errorhandler/tests/all_tests.php : 9
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/errorhandler/tests/runnable/error.php : 4
+---- run_html(- no arguments -)
+2007.09.08,14:28:th
+-->>Error type INFO<<--
+Non-static method SimpleTest::getContext() should not be called statically, assuming $this from incompatible context
+
+At: /home/data/micha/_LIB/simpletest/exceptions.php : 39
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 135
+---- invoke(string: test_add
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 588
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 591
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/errorhandler/tests/all_tests.php : 9
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/errorhandler/tests/runnable/error.php : 4
+---- run_html(- no arguments -)
+2007.09.08,14:28:th
+-->>Error type INFO<<--
+Non-static method SimpleTest::getContext() should not be called statically, assuming $this from incompatible context
+
+At: /home/data/micha/_LIB/simpletest/errors.php : 44
+Called from: /home/data/micha/_LIB/simpletest/invoker.php : 126
+---- invoke(string: test_add
+)
+Called from: /home/data/micha/_LIB/simpletest/exceptions.php : 42
+---- invoke(string: test_add
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 135
+---- invoke(string: test_add
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 588
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 591
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/errorhandler/tests/all_tests.php : 9
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/errorhandler/tests/runnable/error.php : 4
+---- run_html(- no arguments -)
+2007.09.08,14:29:th
+-->>Error type INFO<<--
+Non-static method SimpleTest::getContext() should not be called statically, assuming $this from incompatible context
+
+At: /home/data/micha/_LIB/simpletest/exceptions.php : 39
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 135
+---- invoke(string: test_add
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 588
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 591
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/errorhandler/tests/all_tests.php : 9
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/errorhandler/tests/runnable/error.php : 4
+---- run_html(- no arguments -)
+2007.09.08,14:29:th
+-->>Error type INFO<<--
+Non-static method SimpleTest::getContext() should not be called statically, assuming $this from incompatible context
+
+At: /home/data/micha/_LIB/simpletest/errors.php : 44
+Called from: /home/data/micha/_LIB/simpletest/invoker.php : 126
+---- invoke(string: test_add
+)
+Called from: /home/data/micha/_LIB/simpletest/exceptions.php : 42
+---- invoke(string: test_add
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 135
+---- invoke(string: test_add
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 588
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 591
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/errorhandler/tests/all_tests.php : 9
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/errorhandler/tests/runnable/error.php : 4
+---- run_html(- no arguments -)
+2007.09.08,14:29:th
+-->>Error type INFO<<--
+Non-static method SimpleTest::getContext() should not be called statically, assuming $this from incompatible context
+
+At: /home/data/micha/_LIB/simpletest/exceptions.php : 39
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 135
+---- invoke(string: test_add
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 588
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 591
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/errorhandler/tests/all_tests.php : 9
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/errorhandler/tests/runnable/error.php : 4
+---- run_html(- no arguments -)
+2007.09.08,14:29:th
+-->>Error type INFO<<--
+Non-static method SimpleTest::getContext() should not be called statically, assuming $this from incompatible context
+
+At: /home/data/micha/_LIB/simpletest/errors.php : 44
+Called from: /home/data/micha/_LIB/simpletest/invoker.php : 126
+---- invoke(string: test_add
+)
+Called from: /home/data/micha/_LIB/simpletest/exceptions.php : 42
+---- invoke(string: test_add
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 135
+---- invoke(string: test_add
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 588
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 591
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/errorhandler/tests/all_tests.php : 9
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/errorhandler/tests/runnable/error.php : 4
+---- run_html(- no arguments -)
+2007.09.08,15:42:th
+-->>Error type INFO<<--
+Non-static method SimpleTest::getContext() should not be called statically, assuming $this from incompatible context
+
+At: /home/data/micha/_LIB/simpletest/exceptions.php : 39
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 135
+---- invoke(string: test_add
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 588
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 591
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/errorhandler/tests/all_tests.php : 9
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/errorhandler/tests/runnable/error.php : 4
+---- run_html(- no arguments -)
+2007.09.08,15:42:th
+-->>Error type INFO<<--
+Non-static method SimpleTest::getContext() should not be called statically, assuming $this from incompatible context
+
+At: /home/data/micha/_LIB/simpletest/errors.php : 44
+Called from: /home/data/micha/_LIB/simpletest/invoker.php : 126
+---- invoke(string: test_add
+)
+Called from: /home/data/micha/_LIB/simpletest/exceptions.php : 42
+---- invoke(string: test_add
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 135
+---- invoke(string: test_add
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 588
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 591
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/errorhandler/tests/all_tests.php : 9
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/errorhandler/tests/runnable/error.php : 4
+---- run_html(- no arguments -)
+2007.09.08,15:44:th
+-->>Error type INFO<<--
+Non-static method SimpleTest::getContext() should not be called statically, assuming $this from incompatible context
+
+At: /home/data/micha/_LIB/simpletest/exceptions.php : 39
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 135
+---- invoke(string: test_add
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 588
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 591
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/errorhandler/tests/all_tests.php : 9
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/errorhandler/tests/runnable/error.php : 4
+---- run_html(- no arguments -)
+2007.09.08,15:44:th
+-->>Error type INFO<<--
+Non-static method SimpleTest::getContext() should not be called statically, assuming $this from incompatible context
+
+At: /home/data/micha/_LIB/simpletest/errors.php : 44
+Called from: /home/data/micha/_LIB/simpletest/invoker.php : 126
+---- invoke(string: test_add
+)
+Called from: /home/data/micha/_LIB/simpletest/exceptions.php : 42
+---- invoke(string: test_add
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 135
+---- invoke(string: test_add
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 588
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 591
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/errorhandler/tests/all_tests.php : 9
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/errorhandler/tests/runnable/error.php : 4
+---- run_html(- no arguments -)
+2007.09.08,15:45:th
+-->>Error type INFO<<--
+Non-static method SimpleTest::getContext() should not be called statically, assuming $this from incompatible context
+
+At: /home/data/micha/_LIB/simpletest/exceptions.php : 39
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 135
+---- invoke(string: test_add
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 588
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 591
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/errorhandler/tests/all_tests.php : 9
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/errorhandler/tests/runnable/error.php : 4
+---- run_html(- no arguments -)
+2007.09.08,15:45:th
+-->>Error type INFO<<--
+Non-static method SimpleTest::getContext() should not be called statically, assuming $this from incompatible context
+
+At: /home/data/micha/_LIB/simpletest/errors.php : 44
+Called from: /home/data/micha/_LIB/simpletest/invoker.php : 126
+---- invoke(string: test_add
+)
+Called from: /home/data/micha/_LIB/simpletest/exceptions.php : 42
+---- invoke(string: test_add
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 135
+---- invoke(string: test_add
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 588
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 591
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/errorhandler/tests/all_tests.php : 9
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/errorhandler/tests/runnable/error.php : 4
+---- run_html(- no arguments -)
+2007.09.08,15:46:th
+-->>Error type INFO<<--
+Non-static method SimpleTest::getContext() should not be called statically, assuming $this from incompatible context
+
+At: /home/data/micha/_LIB/simpletest/exceptions.php : 39
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 135
+---- invoke(string: test_add
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 588
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 591
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/errorhandler/tests/all_tests.php : 9
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/errorhandler/tests/runnable/error.php : 4
+---- run_html(- no arguments -)
+2007.09.08,15:46:th
+-->>Error type INFO<<--
+Non-static method SimpleTest::getContext() should not be called statically, assuming $this from incompatible context
+
+At: /home/data/micha/_LIB/simpletest/errors.php : 44
+Called from: /home/data/micha/_LIB/simpletest/invoker.php : 126
+---- invoke(string: test_add
+)
+Called from: /home/data/micha/_LIB/simpletest/exceptions.php : 42
+---- invoke(string: test_add
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 135
+---- invoke(string: test_add
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 588
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 591
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/errorhandler/tests/all_tests.php : 9
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 23    [_fails] => 0    [_exceptions] => 0    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/errorhandler/tests/runnable/error.php : 4
+---- run_html(- no arguments -)
+2007.09.08,16:33:th
+-->>Error type INFO<<--
+Non-static method SimpleTest::getContext() should not be called statically, assuming $this from incompatible context
+
+At: /home/data/micha/_LIB/simpletest/exceptions.php : 39
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 135
+---- invoke(string: test_add
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 588
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 24    [_fails] => 4    [_exceptions] => 9    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 591
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 24    [_fails] => 4    [_exceptions] => 9    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/errorhandler/tests/all_tests.php : 9
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 24    [_fails] => 4    [_exceptions] => 9    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/errorhandler/tests/runnable/error.php : 4
+---- run_html(- no arguments -)
+2007.09.08,16:33:th
+-->>Error type INFO<<--
+Non-static method SimpleTest::getContext() should not be called statically, assuming $this from incompatible context
+
+At: /home/data/micha/_LIB/simpletest/errors.php : 44
+Called from: /home/data/micha/_LIB/simpletest/invoker.php : 126
+---- invoke(string: test_add
+)
+Called from: /home/data/micha/_LIB/simpletest/exceptions.php : 42
+---- invoke(string: test_add
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 135
+---- invoke(string: test_add
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 588
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 24    [_fails] => 4    [_exceptions] => 9    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/simpletest/test_case.php : 591
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 24    [_fails] => 4    [_exceptions] => 9    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/errorhandler/tests/all_tests.php : 9
+---- run(HtmlReporter Object(    [_character_set] => ISO-8859-1    [_test_stack] => Array        (            [0] => ErrorHandler            [1] => /home/data/micha/_LIB/errorhandler/tests/error_handler_gw_test.php            [2] => error_handler_gw_test            [3] => test_add        )    [_size] => 8    [_progress] => 2    [_passes] => 24    [_fails] => 4    [_exceptions] => 9    [_is_dry_run] => )
+)
+Called from: /home/data/micha/_LIB/errorhandler/tests/runnable/error.php : 4
+---- run_html(- no arguments -)
