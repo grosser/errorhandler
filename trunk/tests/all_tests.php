@@ -1,7 +1,12 @@
 <?php
 class all_tests {
+	//will be filled from runnable/xxx
+	public static $conf;
+	
 	public static function tested_dir(){
-		return "/home/data/micha/_LIB/errorhandler";
+		$path = self::$conf['path'];
+		assert(is_string($path));
+		return $path;
 	}
 	
 	public static function run_html(){
@@ -10,8 +15,8 @@ class all_tests {
 	}
 	
 	private static function run(){
-		require_once('/home/data/micha/_LIB/simpletest/unit_tester.php');
-		require_once('/home/data/micha/_LIB/simpletest/reporter.php');
+		require_once(self::$conf['simpletest'].'/unit_tester.php');
+		require_once(self::$conf['simpletest'].'/reporter.php');
 		//require_once('/home/data/micha/_LIB/simpletest/mock_objects.php');
 
 		

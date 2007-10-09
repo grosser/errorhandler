@@ -10,8 +10,8 @@ class rss_processor extends UnitTestCase {
 	function SetUp(){
 		$this->pro = new RSSProcessor();
 		$this->err = new Error(1,'Hallo',array());
-		$this->cachefile = all_tests::tested_dir().'/tests/rss/cache.txt';
-		@unlink($this->cachefile);
+		$this->cachefile = all_tests::tested_dir().'/tests/runnable/rss.cache';
+		if(file_exists($this->cachefile))unlink($this->cachefile);
 	}
 	
 	function tearDown(){

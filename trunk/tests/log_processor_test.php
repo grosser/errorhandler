@@ -7,8 +7,8 @@ class suit_name extends UnitTestCase {
 	function SetUp(){
 		$this->pro = new LogProcessor();
 		$this->err = new Error(1,'Hallo',array());
-		$this->logfile = all_tests::tested_dir().'/tests/log/log.txt';
-		@unlink($this->logfile);
+		$this->logfile = all_tests::tested_dir().'/tests/runnable/test.log';
+		if(file_exists($this->logfile))unlink($this->logfile);
 	}
 	
 	function tearDown(){
