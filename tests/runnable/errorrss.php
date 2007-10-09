@@ -4,7 +4,7 @@ require_once('../errorhandler/ErrorHandler.class.php');
 require_once('../errorhandler/ErrorHandler/RSSProcessor.class.php');
 
 $file = dirname(__FILE__).'/rss.cache';
-@unlink($file);
+if(file_exists($file))unlink($file);
 $pro = new RSSProcessor($file);
 ErrorHandler::get_instance()->add_listener($pro);
 ErrorHandler::get_instance()->activate(E_NOTICE);
