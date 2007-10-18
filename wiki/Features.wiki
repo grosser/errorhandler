@@ -11,8 +11,10 @@
 Many libraries(PEAR/ADODB...)/co-developer ignore E_NOTICE/E_STRICT errors?
 Just set error_reporting to E_STRICT for YOUR files, every other part of the Library can be set to an individual errorlevel. (Blacklisting and Whitelisting supported)
 
-`ErrorHandlerGW::ignore(array('PEAR'=>E_STRICT,'ADODB'=>E_STRICT^E_NOTICE),'black')`
-`ErrorHandlerGW::ignore(array('/myscripts/'=>E_ALL^E_STRICT,'/'=>E_ALL^E_NOTICE),'white')`
+{{{
+ErrorHandlerGW::ignore(array('PEAR'=>E_STRICT,'ADODB'=>E_STRICT^E_NOTICE),'black');
+ErrorHandlerGW::ignore(array('/myscripts/'=>E_ALL^E_STRICT,'/'=>E_ALL^E_NOTICE),'white');
+}}}
 
 (only one type at the time allowed, so either use whitelisting or blacklisting)
 
