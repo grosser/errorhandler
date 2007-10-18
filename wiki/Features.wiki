@@ -3,31 +3,31 @@
 
 = Features =
 
-== Readable, Complete & Secure Error-Backtrace ==
-*  full callstack, every a calle from b called from c
-*  complete Parameters List (Strings/Int/Boll & Arrays)
-*  paramerters of all login/connect/auth calls will be hidden
+==== Readable, Complete & Secure Error-Backtrace ==
+* full callstack, every a calle from b called from c
+* complete Parameters List (Strings/Int/Boll & Arrays)
+* paramerters of all login/connect/auth calls will be hidden
 
-== Ignoring of unwanted errors ==
+==== Ignoring of unwanted errors ==
 Many libraries(PEAR/ADODB...)/co-developer ignore E_NOTICE/E_STRICT errors?
 Just set error_reporting to E_STRICT for YOUR files, every other part of the Library can be set to an individual errorlevel. (Blacklisting and Whitelisting supported)
 
-== Error Handling ==
-=== Halting the script after an error ==
+==== Error Handling ==
+===== Halting the script after an error ==
 After the first error, the script can be halted, preventing any further output/file-action/database-save etc.  
 
 `ErrorHandler::get_instance()->error_handling('bail');`
 
-=== Reporting only the first error ===
+===== Reporting only the first error ===
 All subsequent errors will be silenced.
 
 `ErrorHandler::get_instance()->error_handling('once');`
 
-== Console & HTML Output ==
+==== Console & HTML Output ==
 Automatic detection if the output should be HTML or plain text.
 
-== Output to RSS == 
+==== Output to RSS == 
 Add every error to and RSS file, that you can subscribe from an RSSReader and always be up2date on your projects, without reading/finding logfiles.
 
-== Output to Logfiles ==
+==== Output to Logfiles ==
 Every Error can be send to a Logfile, where it will be added with full stack & date+time.
