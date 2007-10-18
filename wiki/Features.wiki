@@ -16,15 +16,12 @@ Just set error_reporting to E_STRICT for YOUR files, every other part of the Lib
 === Halting the script after an error ==
 After the first error, the script can be halted, preventing any further output/file-action/database-save etc.  
 
-<pre>
-ErrorHandler::get_instance()->error_handling('bail');
-</pre>
+`ErrorHandler::get_instance()->error_handling('bail');`
+
 === Reporting only the first error ===
 All subsequent errors will be silenced.
 
-<nowiki>
-ErrorHandler::get_instance()->error_handling('once');
-</nowiki>
+`ErrorHandler::get_instance()->error_handling('once');`
 
 == Console & HTML Output ==
 Automatic detection if the output should be HTML or plain text.
