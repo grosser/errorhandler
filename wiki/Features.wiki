@@ -3,9 +3,9 @@
 = Features =
 
 ==== Readable, Complete & Secure Error-Backtrace ==
-* full callstack, every a calle from b called from c
-* complete Parameters List (Strings/Int/Boll & Arrays)
-* paramerters of all login/connect/auth calls will be hidden
+  * full callstack, every a calle from b called from c
+  * complete Parameters List (Strings/Int/Boll & Arrays)
+  * paramerters of all login/connect/auth calls will be hidden
 
 ==== Ignoring of unwanted errors ==
 Many libraries(PEAR/ADODB...)/co-developer ignore E_NOTICE/E_STRICT errors?
@@ -17,6 +17,13 @@ ErrorHandlerGW::ignore(array('/myscripts/'=>E_ALL^E_STRICT,'/'=>E_ALL^E_NOTICE),
 }}}
 
 (only one type at the time allowed, so either use whitelisting or blacklisting)
+
+==== Console & HTML Output ==
+Automatic detection if the output should be HTML or plain text.
+
+{{{
+ErrorHandlerGW::initialize(E_ALL^E_STRICT);//will add direct output, and start listening for errors
+}}}
 
 ==== Halting the script after an error ==
 After the first error, the script can be halted, preventing any further output/file-action/database-save etc.  
@@ -38,13 +45,6 @@ ErrorHandler uses a Listener architecture, meaning you can have the same error i
 {{{
 ErrorHandlerGW::set('rss','/home/xx/mylog.rss');//only use rss output
 ErrorHandlerGW::add('rss','/home/xx/mylog.rss');//add rss output
-}}}
-
-==== Console & HTML Output ==
-Automatic detection if the output should be HTML or plain text.
-
-{{{
-ErrorHandlerGW::initialize(E_ALL^E_STRICT);//will add direct output, and start listening for errors
 }}}
 
 
