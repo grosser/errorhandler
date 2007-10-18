@@ -1,7 +1,4 @@
-#Description of Features
-
-= Features =
-
+#labels Featured
 ==== Readable, Complete & Secure Error-Backtrace ==
   * full callstack, every a calle from b called from c
   * complete Parameters List (Strings/Int/Boll & Arrays)
