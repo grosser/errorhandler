@@ -9,10 +9,10 @@
 
 ==== Ignoring of unwanted errors ==
 Many libraries(PEAR/ADODB...)/co-developer ignore E_NOTICE/E_STRICT errors?
-Just set error_reporting to E_STRICT for YOUR files, every other part of the Library can be set to an individual errorlevel. (Blacklisting and Whitelisting supported)
+Just set error_reporting to E_STRICT for YOUR files, every other part of the Library can be set to an individual errorlevel. (Blacklisting and Whitelisting supported, case-insensitive)
 
 {{{
-ErrorHandlerGW::ignore(array('PEAR'=>E_STRICT,'ADODB'=>E_STRICT^E_NOTICE),'black');
+ErrorHandlerGW::ignore(array('pear'=>E_STRICT,'adodb'=>E_STRICT^E_NOTICE),'black');
 ErrorHandlerGW::ignore(array('/myscripts/'=>E_ALL^E_STRICT,'/'=>E_ALL^E_NOTICE),'white');
 }}}
 
@@ -21,31 +21,43 @@ ErrorHandlerGW::ignore(array('/myscripts/'=>E_ALL^E_STRICT,'/'=>E_ALL^E_NOTICE),
 ==== Halting the script after an error ==
 After the first error, the script can be halted, preventing any further output/file-action/database-save etc.  
 
-`ErrorHandler::get_instance()->error_handling('bail');`
+{{{
+ErrorHandler::get_instance()->error_handling('bail');
+}}}
 
 ==== Reporting only the first error ===
 All subsequent errors will be silenced.
 
-`ErrorHandler::get_instance()->error_handling('once');`
+{{{
+ErrorHandler::get_instance()->error_handling('once');
+}}}
 
 ==== Multiple Outputs ==
 ErrorHandler uses a Listener architecture, meaning you can have the same error in your HTML, log and RSS.
 
-`ErrorHandlerGW::set('rss','/home/xx/mylog.rss')//only use rss output` 
-`ErrorHandlerGW::add('rss','/home/xx/mylog.rss')//add rss output`
+{{{
+ErrorHandlerGW::set('rss','/home/xx/mylog.rss');//only use rss output
+ErrorHandlerGW::add('rss','/home/xx/mylog.rss');//add rss output
+}}}
 
 ==== Console & HTML Output ==
 Automatic detection if the output should be HTML or plain text.
 
-`ErrorHandlerGW::initialize(E_ALL^E_STRICT)//will add direct output, and start listening for errors`
+{{{
+ErrorHandlerGW::initialize(E_ALL^E_STRICT);//will add direct output, and start listening for errors
+}}}
 
 
 ==== Output to RSS == 
 Add every error to and RSS file, that you can subscribe from an RSSReader and always be up2date on your projects, without reading/finding logfiles.
 
-`ErrorHandlerGW::add('rss','/home/xx/mylog.rss')` 
+{{{
+ErrorHandlerGW::add('rss','/home/xx/mylog.rss');
+}}}
 
 ==== Output to Logfiles ==
 Every Error can be send to a Logfile, where it will be added with full stack & date+time.
 
-`ErrorHandlerGW::add('log','/home/xx/mylog.log')` 
+{{{
+ErrorHandlerGW::add('log','/home/xx/mylog.log');
+}}}
