@@ -14,10 +14,11 @@ Just set error_reporting to E_STRICT for YOUR files, every other part of the Lib
 
 == Error Handling ==
 === Halting the script after an error ==
-After the first error, the script can be halted, preventing any further output/file-action/database-save etc.
-<code>
+After the first error, the script can be halted, preventing any further output/file-action/database-save etc.  
+
+<pre>
 ErrorHandler::get_instance()->error_handling('bail');
-</code
+</pre>
 === Reporting only the first error ===
 All subsequent errors will be silenced.
 
