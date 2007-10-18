@@ -1,6 +1,3 @@
-=Nothing here=
-#Nothing here
-
 you should not be here...
 how to deactivate this link ?
 (it will always put the ? behind ErrorHandler ...)
