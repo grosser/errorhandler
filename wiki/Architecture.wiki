@@ -1,6 +1,4 @@
 #labels Featured
-= Architecture =
-
 The Errorhandler consists of 3 Layers.
 
 ==== User input ==
