@@ -64,37 +64,50 @@ abstract class ErrorRenderer {
 	//--------
 
 	final public function render(Error $error){
-		if($error->is_assertion()){
-			return $this->render_error($error,'ASSERT');
+		$type=$this->errortype_to_word($error->get_type());
+		switch($type) {
+			case 'ERROR':
+			case 'WARNING':
+			case 'ASSERT':
+				return $this->render_error($error,$type);
+			case 'INFO':
+				$out = $this->render_error($error,$type);
+				$out .= $this->disabling_hint();
+				return $out;
+			case 'UNKNOWN':
+				$out =  $this->render_error($error,"TYPE ".$error->get_type());
+				$out .= "---------UNKNOWN ERROR CODE {$error->get_type()}----------";
+				return $out;
+			default: throw new Exception("Errorcode is wrong got $type, expected INFO/WARNING/ERROR/UNKNOWN");
+				
 		}
-		
-		switch($error->get_type()) {
+	}
+	
+	public function errortype_to_word($type){
+		assert(is_int($type));
+		switch($type){
+			case Error::ASSERT_TYPE:
+				return 'ASSERT';
 			case E_ERROR:
 			case E_PARSE:
 			case E_CORE_ERROR:
 			case E_USER_ERROR:
 			case E_COMPILE_ERROR:
 			case E_RECOVERABLE_ERROR:
-				return $this->render_error($error,"ERROR");
+				return 'ERROR';
 			case E_WARNING:
 			case E_CORE_WARNING:
 			case E_COMPILE_WARNING:
 			case E_USER_WARNING:
-				return $this->render_error($error,"WARNING");
-				break;
+				return 'WARNING';
 			case E_NOTICE:
 			case E_USER_NOTICE:
 			case E_STRICT:
-				$out = $this->render_error($error,"INFO");
-				$out .= $this->disabling_hint();
-				return $out;
-				break;
+				return 'INFO';
 			default:
-				$out =  $this->render_error($error,"TYPE ".$error->get_type());
-				$out .= "---------UNKNOWN ERROR CODE {$error->get_type()}----------";
-				return $out;
-				break;
+				return 'UNKNOWN';
 		}
+		
 	}
 
 	/**
