@@ -8,6 +8,7 @@ class ErrorHandlerGW {
 	const DIRECT_PROCESSOR = 'direct';
 	const LOG_PROCESSOR = 'log';
 	const RSS_PROCESSOR = 'rss';
+	const MAIL_PROCESSOR = 'mail';
 
 	/**
 	 * @return ErrorHandler
@@ -42,6 +43,10 @@ class ErrorHandlerGW {
 			case self::RSS_PROCESSOR:
 				$classname = 'RSSProcessor';
 				break;
+			case self::MAIL_PROCESSOR:
+				$classname = 'MailProcessor';
+				if(!$file_path)throw new Exception('For MailProcessor to_email cannot be empty');
+				break;
 			default:
 				trigger_error("ErrorProcessor $processor_name is unknown! try (".self::DIRECT_PROCESSOR."),
 					(".self::LOG_PROCESSOR.",'logfile'),(".self::RSS_PROCESSOR.",'rssoutput')");
@@ -53,8 +58,8 @@ class ErrorHandlerGW {
 
 	private static function execute_add($classname,$file_path=null){
 		require_once($classname.'.class.php');
-		$processor = isset($file_path)?new $classname():new $classname($file_path);
-		 self::eh_instance()->add_listener($processor);
+		$processor = isset($file_path)?new $classname($file_path):new $classname();
+		self::eh_instance()->add_listener($processor);
 	}
 
 	public function ignore(array $list,$ignore_type=ErrorHandler::IGNORE_BLACKLIST){

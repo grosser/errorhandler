@@ -15,6 +15,9 @@ class ErrorProcessor {
 	//--------renderer
 	private $renderer;
 		
+	/**
+	 * @return ErrorRenderer
+	 */
 	protected function get_renderer(){
 		return $this->renderer;
 	}
