@@ -1,5 +1,6 @@
 <?php
 /**
+ * @see PEAR/Mail.php
  * @author Michael Grosser - grosser.michael-AT-gmail.com
  */
 
@@ -18,6 +19,8 @@ class MailProcessor extends ErrorProcessor {
 	}
 	
 	protected function render_error(Error $error){
+		//include Mail
+		@include_once 'PEAR/Mail.php';
 		//use the Autoloader to find PEAR/Mail
 		if(!class_exists('Mail',true))return;
 		
