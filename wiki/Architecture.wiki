@@ -2,7 +2,7 @@
 The Errorhandler consists of 3 Layers.
 
 ==== User input ==
-ErrorHandlerGW is an easy-to access, userfriendly interface to the ErrorHandler. It validates input and translates it to calls to the ErrorHandler.
+ErrorHandlerGW is an easy-to access, userfriendly interface to the ErrorHandler_. It validates input and translates it to calls to the ErrorHandler_.
 
 ==== Error Handling ==
 ErrorHandler catches the Errors that come in from error_reporting, decides if they should be handled or ignored, cleans the Error backtrace and puts all this information in the Error Object.
