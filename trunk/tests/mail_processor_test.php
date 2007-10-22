@@ -16,8 +16,15 @@ class mail_processor extends UnitTestCase {
 	}
 	
 	function test_send(){
-		
-		
+		$this->pro->mocker->set_return('create_mail',$this);
+		$this->pro->notify_of_error(new Error(1,'testing mail',array()));
+		$this->assertEqual($this->pro->mocker->get_count('create_mail'),1);
+	}
+	
+	/**
+	 * mocked function
+	 */
+	function send(){
 		
 	}
 }
