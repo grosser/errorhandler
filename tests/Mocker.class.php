@@ -5,6 +5,8 @@
 class Mocker {
 	
 	private $mock;
+	private $return=array();
+	private $count = array(); 
 	
 	public function __construct($mock){
 		$this->mock = $mock;
@@ -17,20 +19,23 @@ class Mocker {
 	}
 	
 	public function inside_call($func_name=null,$params=null){
-//		if(!$func_name){
-//			$trace = debug_backtrace();
-//			array_shift($trace);//call to this
-//			$trace = array_shift($trace);
-//			if($trace['class']==get_class($this->mock)){
-//				$func_name = $trace['function'];
-//				$params = $trace['args'];
-//			}
-//			else throw new Exception('inside_call provide func_name or call from inside a mocked object');
-//		}
-//		//user entered '' or null
-//		if(!$params&&!is_array($params))$params=array();
-//		
-//		if(@$this->return[$func_name])return array_pop($this->return[$func_name]);
+		if(!$func_name){
+			$trace = debug_backtrace();
+			array_shift($trace);//call to this
+			$trace = array_shift($trace);
+			if(@$trace['class']==get_class($this->mock)){
+				$func_name = $trace['function'];
+				$params = $trace['args'];
+				
+			}
+			else throw new Exception('inside_call provide func_name or call from inside a mocked object');
+		}
+		//user entered '' or null
+		if(!$params&&!is_array($params))$params=array();
+		
+		@$this->count[$func_name]++;
+		
+		if(@$this->return[$func_name])return array_pop($this->return[$func_name]);
 		return $this->mock->mock_execute($func_name,$params);  
 	}
 
@@ -38,5 +43,8 @@ class Mocker {
 		$this->return[$func_name][]=$value;
 	}
 	
+	public function get_count($func_name){
+		return $this->count[$func_name];
+	}
 }
 ?>
