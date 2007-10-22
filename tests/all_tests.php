@@ -29,9 +29,12 @@ class all_tests {
 		require_once(self::tested_dir().'/errorhandler/RSSRenderer.class.php');
 		require_once(self::tested_dir().'/errorhandler/LogProcessor.class.php');
 		require_once(self::tested_dir().'/errorhandler/RSSProcessor.class.php');
+		require_once(self::tested_dir().'/errorhandler/MailProcessor.class.php');
 		require_once(self::tested_dir().'/errorhandler/ErrorReportingStatus.class.php');
 		require_once("ErrorCreator.class.php");
+		require_once("Mocker.class.php");
 		require_once("MockErrorProcessor.class.php");
+		require_once("MockMailProcessor.class.php");
 		require_once('TestHtmlRenderer.class.php');
 		
 		
@@ -46,6 +49,7 @@ class all_tests {
 		$test->addTestFile(self::tested_dir().'/tests/rss_renderer_test.php');
 		$test->addTestFile(self::tested_dir().'/tests/log_processor_test.php');
 		$test->addTestFile(self::tested_dir().'/tests/rss_processor_test.php');
+		$test->addTestFile(self::tested_dir().'/tests/mail_processor_test.php');
 		return $test;
 	}
 	

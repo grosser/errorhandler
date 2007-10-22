@@ -19,12 +19,7 @@ class MailProcessor extends ErrorProcessor {
 	}
 	
 	protected function render_error(Error $error){
-		//include Mail
-		@include_once 'PEAR/Mail.php';
-		//use the Autoloader to find PEAR/Mail
-		if(!class_exists('Mail',true))return;
-		
-		$ma = Mail::factory('mail');
+		$mail = $this->create_mail();
       //$mail->headers()
 		$body = $this->get_renderer()->render($error);
 		$my_mail = 'no-reply@foo.bar';
@@ -34,7 +29,16 @@ class MailProcessor extends ErrorProcessor {
 			'Reply-To'  => 'ErrorHandler',
 			'Subject' => $this->get_renderer()->errortype_to_word($error->get_type()),
 		);
-		$ma->send($this->to,$hdrs, $body);
+		$mail->send($this->to,$hdrs, $body);
+	}
+	
+	protected function create_mail(){
+		//include Mail
+		@include_once 'Mail.php';
+		//use the Autoloader to find PEAR/Mail
+		if(!class_exists('Mail',true))return;
+		
+		return Mail::factory('mail');
 	}
 }
 ?>
