@@ -1,6 +1,13 @@
 <?php
 class MockMailProcessor extends MailProcessor{
+
+	//--------mocked methods
+	protected function create_mail(){
+		if($this->mock_inside_call)return parent::create_mail();
+		return $this->mocker->inside_call();
+	}
 	
+	//--------Mocker basics
 	/**
 	 * @var Mocker
 	 */
@@ -15,11 +22,6 @@ class MockMailProcessor extends MailProcessor{
 	public function __call($name,$params){
 		if(strpos($name,'mock_')!==0)return call_user_func_array(array(parent,$func),$params);
 		return $this->mocker->outside_call($name,$params);
-	}
-	
-	protected function create_mail(){
-		if($this->mock_inside_call)return parent::create_mail();
-		return $this->mocker->inside_call();
 	}
 	
 	public function mock_execute($func,array $params){

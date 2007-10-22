@@ -34,7 +34,9 @@ class Mocker {
 		//user entered '' or null
 		if(!$params&&!is_array($params))$params=array();
 		
-		$this->calls[$func_name][]=$params;
+		//add to calls(calls[0] is the most recent...)
+		if(!@$this->calls[$func_name])$this->calls[$func_name]=array();
+		array_unshift($this->calls[$func_name],$params);
 		
 		if(@$this->return[$func_name])return array_pop($this->return[$func_name]);
 		if(!$this->log_only)return $this->mock->mock_execute($func_name,$params);
@@ -46,7 +48,7 @@ class Mocker {
 	}
 	
 	public function get_count($func_name){
-		return count($this->calls[$func_name]);
+		return count(@$this->calls[$func_name]);
 	}
 
 	public function get_params($func_name,$call_numer=0){
