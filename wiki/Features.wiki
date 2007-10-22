@@ -58,3 +58,11 @@ Every Error can be send to a Logfile, where it will be added with full stack & d
 {{{
 ErrorHandlerGW::add('log','/home/xx/mylog.log');
 }}}
+
+==== Output to Mail ==
+Every Error can be send as Mail.
+Requires: `ini_set('inlcude_path','/path/to/pear')` OR PEAR autoloader is active
+
+{{{
+ErrorHandlerGW::add('mail','foo@bar.com');
+}}}
