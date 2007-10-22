@@ -46,5 +46,9 @@ class Mocker {
 	public function get_count($func_name){
 		return count($this->calls[$func_name]);
 	}
+
+	public function get_params($func_name,$call_numer=0){
+		return $this->calls[$func_name][$call_numer];
+	}
 }
 ?>
