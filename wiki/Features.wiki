@@ -13,7 +13,7 @@ ErrorHandlerGW::ignore(array('pear'=>E_STRICT,'adodb'=>E_STRICT^E_NOTICE));
 ErrorHandlerGW::ignore(array('/myscripts/'=>E_ALL^E_STRICT,'/'=>E_ALL^E_NOTICE),'white');
 }}}
 
-(only one type at the time allowed, so either use whitelisting or blacklisting)
+(only one type at the time allowed, so either use whitelisting or blacklisting(default))
 
 ==== Console or HTML Output ==
 Automatic detection if the output should be HTML or plain text.
