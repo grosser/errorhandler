@@ -22,10 +22,11 @@ class mail_processor extends UnitTestCase {
 	}
 	
 	/**
-	 * mocked function
+	 * mocked function call
 	 */
-	function send(){
-		
+	function send($to,$headers,$body){
+		$this->assertEqual($to,'xxx@xxx.xx');
+		$this->assertEqual(substr_count($body,'testing mail'),1);
 	}
 }
 ?>

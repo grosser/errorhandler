@@ -6,7 +6,7 @@ class Mocker {
 	
 	private $mock;
 	private $return=array();
-	private $count = array(); 
+	private $calls = array(); 
 	
 	public function __construct($mock){
 		$this->mock = $mock;
@@ -33,7 +33,7 @@ class Mocker {
 		//user entered '' or null
 		if(!$params&&!is_array($params))$params=array();
 		
-		@$this->count[$func_name]++;
+		$this->calls[$func_name][]=$params;
 		
 		if(@$this->return[$func_name])return array_pop($this->return[$func_name]);
 		return $this->mock->mock_execute($func_name,$params);  
@@ -44,7 +44,7 @@ class Mocker {
 	}
 	
 	public function get_count($func_name){
-		return $this->count[$func_name];
+		return count($this->calls[$func_name]);
 	}
 }
 ?>
