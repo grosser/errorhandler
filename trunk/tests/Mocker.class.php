@@ -6,7 +6,8 @@ class Mocker {
 	
 	private $mock;
 	private $return=array();
-	private $calls = array(); 
+	private $calls = array();
+	public $log_only = false;
 	
 	public function __construct($mock){
 		$this->mock = $mock;
@@ -15,7 +16,7 @@ class Mocker {
 	public function outside_call($func_name,$params){
 		assert(strpos($func_name,'mock_')===0);
 		$func_name=substr($func_name,5);//cut off mock_
-		return $this->mock->mock_execute($func_name,$params);
+		if(!$this->log_only)return $this->mock->mock_execute($func_name,$params);
 	}
 	
 	public function inside_call($func_name=null,$params=null){
@@ -36,10 +37,11 @@ class Mocker {
 		$this->calls[$func_name][]=$params;
 		
 		if(@$this->return[$func_name])return array_pop($this->return[$func_name]);
-		return $this->mock->mock_execute($func_name,$params);  
+		if(!$this->log_only)return $this->mock->mock_execute($func_name,$params);
+		return 'null';
 	}
 
-	public function set_return($func_name,$value){
+	public function add_return($func_name,$value){
 		$this->return[$func_name][]=$value;
 	}
 	
