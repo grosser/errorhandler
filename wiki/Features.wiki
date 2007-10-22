@@ -37,7 +37,7 @@ ErrorHandler::get_instance()->error_handling('once');
 }}}
 
 ==== Multiple Outputs ==
-ErrorHandler uses a Listener architecture, meaning you can have the same error in your HTML, log and RSS.
+ErrorHandler uses a Listener architecture, meaning you can have the same error in your HTML, log ,RSS and Mail.
 
 {{{
 ErrorHandlerGW::set('rss','/home/xx/mylog.rss');//only use rss output
