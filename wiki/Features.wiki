@@ -15,7 +15,7 @@ ErrorHandlerGW::ignore(array('/myscripts/'=>E_ALL^E_STRICT,'/'=>E_ALL^E_NOTICE),
 
 (only one type at the time allowed, so either use whitelisting or blacklisting)
 
-==== Console & HTML Output ==
+==== Console or HTML Output ==
 Automatic detection if the output should be HTML or plain text.
 
 {{{
