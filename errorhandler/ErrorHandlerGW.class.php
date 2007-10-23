@@ -26,6 +26,22 @@ class ErrorHandlerGW {
 		$inst->activate($error_level);
 	}
 
+	public static function report($type){
+		assert(is_string($type));
+		switch($type){
+			case ErrorHandler::HANDLING_BAIL:
+			case ErrorHandler::HANDLING_ONCE:
+			case ErrorHandler::HANDLING_MULTIPLE:
+				self::eh_instance()->error_handling($type);
+				break;
+			default: throw new Exception("Unknown type $type, known types:".
+				ErrorHandler::HANDLING_BAIL.' '.
+				ErrorHandler::HANDLING_ONCE.' '.
+				ErrorHandler::HANDLING_MULTIPLE.' '.
+				"");
+		}
+	}
+	
 	public static function set($processor_name,$file_path=null){
 		self::eh_instance()->remove_listeners();
 		self::add($processor_name,$file_path);
