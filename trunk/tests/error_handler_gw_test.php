@@ -5,11 +5,25 @@ class error_handler_gw_test extends UnitTestCase {
 	 * @var ErrorHandler
 	 */
 	public $handler;
-	
+
 	function SetUp(){
 		error_reporting(E_ALL);
 		$this->handler = ErrorHandler::get_instance();
 		$this->handler->remove_listeners();
+	}
+	
+	public function test_report(){
+		ErrorHandlerGW::report(ErrorHandler::HANDLING_BAIL);
+		ErrorHandlerGW::report(ErrorHandler::HANDLING_ONCE);
+		ErrorHandlerGW::report(ErrorHandler::HANDLING_MULTIPLE);
+		
+		try {
+			ErrorHandlerGW::report('wtf');
+			$this->fail();
+		} catch (Exception $e) {
+			$this->pass();
+		}
+		
 	}
 	
 	function test_initialize(){
