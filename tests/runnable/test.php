@@ -1,17 +1,11 @@
 <?php
-require_once('../../errorhandler/ErrorHandler.class.php');
+error_reporting(E_ALL);
 
-$b = 2;
-$a = 1;
-
-print $a ^ $b;
-print $a | $b;
+require_once('../../errorhandler/ErrorHandlerGW.class.php');
 
 
-
-exit();
-ErrorHandler::initialize(E_STRICT);
-test_test(array('a'=>"c>>>>"));
+ErrorHandlerGW::initialize(E_ALL);
+test_test(array('testen'=>"t>e>s>t"));
 
 function test_test($c){
 	$x = $u;
