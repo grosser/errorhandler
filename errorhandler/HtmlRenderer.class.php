@@ -129,7 +129,7 @@ class HTMLRenderer extends ErrorRenderer{
 				$var = get_class($var);
 			}
 			else{
-				$var = @htmlspecialchars($var);
+				$var = htmlspecialchars($var);
 			}
 			$vars[$key]=$var;
 		}

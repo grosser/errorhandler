@@ -257,10 +257,6 @@ class ErrorHandler {
 	}
 	
 	private function error_type_is_ignored($error_type){
-		// don't respond to the error if it
-		// was suppressed with a '@' -> error_reporting() = 0
-		if(error_reporting()==0)return true;
-		
 		if ($this->bit_is_set($error_type,error_reporting())) return false;
 		return true;
 	}
@@ -340,6 +336,10 @@ function assert_callback($script_path=null, $line=null, $message) {
 }
 
 function error_callback($type, $message, $file, $line=null, $context=null){
+	// don't respond to the error if it
+	// was suppressed with a '@' -> error_reporting() = 0
+	if(error_reporting()===0)return;
+	
 	$line;$context;//we dont need sice we use backtrace! ->no compiler warnings
 	global $debugger_recursion;
 	if(!$debugger_recursion){
