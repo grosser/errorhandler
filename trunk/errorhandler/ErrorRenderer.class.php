@@ -129,8 +129,8 @@ abstract class ErrorRenderer {
 		$out = '';
 		$first_line = true;
 		foreach($trace as $trace_part) {
-			$line = @$trace_part['line']?$trace_part['line']:'Unknown';
-			$file = @$trace_part['file']?$this->short_file_name($trace_part['file']):'Unknown';
+			$line = isset($trace_part['line'])?$trace_part['line']:'Unknown';
+			$file = isset($trace_part['file'])?$this->short_file_name($trace_part['file']):'Unknown';
 			
 			$out .= $this->render_file_and_line($file,$line,$first_line);
 			
