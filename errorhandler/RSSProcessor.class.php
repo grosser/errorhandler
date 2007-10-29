@@ -7,7 +7,7 @@ require_once('RSSRenderer.class.php');
 
 class RSSProcessor extends LogProcessor{
 
-	const ENTRY_SEPERATOR = "\n";
+	const ENTRY_SEPERATOR = "<!-- ENTRY_SEPERATOR -->";
 	const MAX_ENTRIES = 10;
 	
 	public function __construct($path_to_file){
@@ -26,22 +26,23 @@ class RSSProcessor extends LogProcessor{
 		$content[] = $this->rss_head();
 		$content[] = $added_content;
 		
-		eregi("(<entry>.*</entry>)",@file_get_contents($this->get_log_file()),$items);
-
-		if(@$items[1]){
-			//split string into array /w strings
-			$items = explode('</entry>',$items[1]);//will leave 1 empty string
-			foreach($items as $key => $item)if(trim($item))$items[$key]=$item.'</entry>';
+		$old = trim(@file_get_contents($this->get_log_file()));
+		if($old){
+			$items = explode(self::ENTRY_SEPERATOR,$old);
+			
+			array_shift($items);//head
+			array_pop($items);//foot
 			
 			//add to content
 			foreach($items as $key => $item){
 				if($key>=self::MAX_ENTRIES-1)break;
-				$content[]=$item.self::ENTRY_SEPERATOR;
+				$content[]=$item;
 			}
 		}
+
 		$content[]=$this->rss_foot();
 		
-		$content = implode(self::ENTRY_SEPERATOR,$content);
+		$content = implode("\n".self::ENTRY_SEPERATOR."\n",$content);
 		
 		file_put_contents($this->get_log_file(),$content);
 	}
