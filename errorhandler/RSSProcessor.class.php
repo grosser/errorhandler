@@ -8,9 +8,11 @@ require_once('RSSRenderer.class.php');
 class RSSProcessor extends LogProcessor{
 
 	const ENTRY_SEPERATOR = "\n";
+	const MAX_ENTRIES = 10;
 	
-	public function __construct($file=null){
-		$this->set_log_file($file,self::TEST_FILE);
+	public function __construct($path_to_file){
+		assert(is_string($path_to_file));
+		$this->set_log_file($path_to_file,self::TEST_FILE);
 		$this->set_renderer(new RSSRenderer());
 	}
 
@@ -24,15 +26,18 @@ class RSSProcessor extends LogProcessor{
 		$content[] = $this->rss_head();
 		$content[] = $added_content;
 		
-		eregi("(<entry>.*</entry>)",file_get_contents($this->get_log_file()),$items);
+		eregi("(<entry>.*</entry>)",@file_get_contents($this->get_log_file()),$items);
 
-		var_dump($items);
-		if(@$items[1])array_shift($items);
-		else $items=array();
-		
-		foreach($items as $key => $item){
-			if($key>=10)break;
-			$content[]=$item.self::ENTRY_SEPERATOR;
+		if(@$items[1]){
+			//split string into array /w strings
+			$items = explode('</entry>',$items[1]);//will leave 1 empty string
+			foreach($items as $key => $item)if(trim($item))$items[$key]=$item.'</entry>';
+			
+			//add to content
+			foreach($items as $key => $item){
+				if($key>=self::MAX_ENTRIES-1)break;
+				$content[]=$item.self::ENTRY_SEPERATOR;
+			}
 		}
 		$content[]=$this->rss_foot();
 		
@@ -47,7 +52,7 @@ class RSSProcessor extends LogProcessor{
 	
 	private function rss_head(){
 		$out =  '<?xml version="1.0" encoding="utf-8"?>'."\n";
-		$out .= '<feed xmlns="http://www.w3.org/2005/Atom">'."\n";
+		$out .= '<feed version="0.3" xmlns="http://www.w3.org/2005/Atom">'."\n";
 		$out .= '	<title>Error Log</title>'."\n";
 		$out .= '	<updated>2007-04-13T15:52:08+02:00</updated>'."\n";//TODO: letzter eintrag ??
 		$out .= '	<author>'."\n";

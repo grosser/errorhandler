@@ -1,6 +1,6 @@
 <?php
 class rss_processor extends UnitTestCase {
-	private $cachefile;
+	private $xmlfile;
 	private $err;
 	/**
 	 * @var RSSProcessor
@@ -8,39 +8,38 @@ class rss_processor extends UnitTestCase {
 	private $pro;
 	
 	function SetUp(){
-		$this->pro = new RSSProcessor();
+		$this->xmlfile = all_tests::tested_dir().'/tests/runnable/rss.xml';
+		$this->pro = new RSSProcessor($this->xmlfile);
 		$this->err = new Error(1,'Hallo',array());
-		$this->cachefile = all_tests::tested_dir().'/tests/runnable/rss.cache';
-		if(file_exists($this->cachefile))unlink($this->cachefile);
+		if(file_exists($this->xmlfile))unlink($this->xmlfile);
 	}
 	
 	function tearDown(){
-		@unlink($this->cachefile);
+		@unlink($this->xmlfile);
 	}
 
+	private function content(){
+		return file_get_contents($this->xmlfile);
+	}
+	
 	function test_writing(){
-		$this->pro->set_cache_file($this->cachefile);
-		
 		//insert 2 errors and test splitting
 		$this->pro->notify_of_error($this->err);
 		$this->pro->notify_of_error($this->err);
 		
-		$content = file_get_contents($this->cachefile);
-		$content = split(RSSProcessor::ENTRY_SEPERATOR,$content);
-		
-		$this->assertEqual(count($content),3);
+		$this->assertEqual(substr_count($this->content(),'<entry'),2);
 	}
 	
 	function test_viewing(){
-		$this->pro->set_cache_file($this->cachefile);
-		
 		//basic empty feed
-		$out = $this->pro->rss();
+		$this->pro->notify_of_error($this->err);
+		
+		$out = file_get_contents($this->xmlfile);
+		
 		$this->assert(new PatternExpectation('/author/'),$out);
 		$this->assert(new PatternExpectation('/<feed/'),$out);
 		$this->assert(new PatternExpectation('/<\?xml version=/'),$out);
 		$this->assert(new PatternExpectation('/<\/feed>/'),$out);
-		$this->assert(new NoPatternExpectation('/entry/'),$out);
 		
 
 		//with errors
@@ -48,12 +47,20 @@ class rss_processor extends UnitTestCase {
 		$e2 = new Error(1,'Zwei',array());
 		$this->pro->notify_of_error($e1);
 		$this->pro->notify_of_error($e2);
-		$out = $this->pro->rss();
+		$out = file_get_contents($this->xmlfile);
 		
 		$this->assert(new PatternExpectation('/feed/'),$out);
 		$this->assert(new PatternExpectation('/entry/'),$out);
 		$this->assert(new PatternExpectation('/Eins/'),$out);
 		$this->assert(new PatternExpectation('/Zwei/'),$out);
+		
+		
+		//max 10 entrys
+		unlink($this->xmlfile);
+		for($i=0;$i<23;$i++){
+			$this->pro->notify_of_error($e1);
+		}
+		$this->assertEqual(substr_count($this->content(),'<entry'),RSSProcessor::MAX_ENTRIES);
 	}
 }
 ?>
