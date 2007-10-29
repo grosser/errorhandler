@@ -58,6 +58,7 @@ class ErrorHandlerGW {
 				break;
 			case self::RSS_PROCESSOR:
 				$classname = 'RSSProcessor';
+				if(!$file_path)throw new Exception('For RSSProcessor filename cannot be empty');
 				break;
 			case self::MAIL_PROCESSOR:
 				$classname = 'MailProcessor';
