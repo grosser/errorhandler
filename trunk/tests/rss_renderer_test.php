@@ -10,10 +10,10 @@ class rss_renderer_test extends UnitTestCase {
 		$out = $this->renderer->render($error);
 		
 		$this->assert(new PatternExpectation('/<entry>/'),$out);
-		$this->assert(new PatternExpectation('/<description>/'),$out);
+		$this->assert(new PatternExpectation('/<summary>/'),$out);
 		$this->assert(new PatternExpectation('/Nachricht/'),$out);
 		$this->assert(new NoPatternExpectation('/Called from/'),$out);
-		$this->assert(new PatternExpectation('/<\/description>/'),$out);
+		$this->assert(new PatternExpectation('/<\/summary>/'),$out);
 		$this->assert(new PatternExpectation('/<\/entry>/'),$out);
 	}
 }

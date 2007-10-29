@@ -56,7 +56,7 @@ class HTMLRenderer extends ErrorRenderer{
 		else {
 			$out .= "<!-- no arguments -->";
 		}
-		$out .= "<b>)</b></font><br>";
+		$out .= "<b>)</b></span><br>";
 		return $out;
 	}
 	
@@ -70,10 +70,10 @@ class HTMLRenderer extends ErrorRenderer{
 		if($this->get_dump_globals()){
 			$this->set_dump_globals(false);//run this code only once per run..
 
-			$out .= "<span color=red><b>GLOBALS:</b></font><font color='#440000'><pre>";
+			$out .= "<span color=red><b>GLOBALS:</b></span><span color='#440000'><pre>";
 			$out .= htmlspecialchars(print_r($GLOBALS,true));
 			$out .= "</pre><br><b>END OF GLOBALS</b></span><hr>";
-			$out .= "<font span='#CC3300'><b>CONSTANTS:</b></font><br><pre>";
+			$out .= "<span color='#CC3300'><b>CONSTANTS:</b></span><br><pre>";
 			$out .= htmlspecialchars(print_r(get_defined_constants(),true));
 			$out .= "</pre><br><b>END OF CONSTANTS</b></span><br>";
 		}

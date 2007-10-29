@@ -12,10 +12,11 @@ class RSSRenderer extends HTMLRenderer{
 	protected function render_error(Error $error,$topic='Error'){
 		$out = '<entry>';
 		$out .= $this->render_title($topic,$error->get_message());
-		$out .= '<description><![CDATA[';
+		$out .= '<summary><![CDATA[';
 		$out .= $this->render_backtrace($error->get_backtrace());
-		$out .= ']]></description>';
+		$out .= ']]></summary>';
 		$out .= $this->render_globals();
+		$out .= "<id>".rand()."</id>";
 		$out .= '</entry>';
 
 		return $out;

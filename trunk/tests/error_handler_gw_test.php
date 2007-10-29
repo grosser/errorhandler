@@ -50,7 +50,7 @@ class error_handler_gw_test extends UnitTestCase {
 
 	function test_add(){
 		//simple
-		ErrorHandlerGW::add(ErrorHandlerGW::LOG_PROCESSOR,'test.log');
+		ErrorHandlerGW::add(ErrorHandlerGW::LOG_PROCESSOR,"test.log");
 		$listeners = $this->handler->get_listeners();
 		
 		$this->assertTrue(get_class($listeners[0])=='LogProcessor');
@@ -62,7 +62,7 @@ class error_handler_gw_test extends UnitTestCase {
 		} catch(Exception $e){}
 		
 		//add another
-		ErrorHandlerGW::add(ErrorHandlerGW::RSS_PROCESSOR);
+		ErrorHandlerGW::add(ErrorHandlerGW::RSS_PROCESSOR,"test.rss");
 		$listeners = $this->handler->get_listeners();
 		
 		$this->assertTrue(get_class($listeners[0])=='LogProcessor');
@@ -70,8 +70,8 @@ class error_handler_gw_test extends UnitTestCase {
 	}
 	
 	function test_set(){
-		ErrorHandlerGW::add(ErrorHandlerGW::RSS_PROCESSOR);
-		ErrorHandlerGW::add(ErrorHandlerGW::RSS_PROCESSOR);
+		ErrorHandlerGW::add(ErrorHandlerGW::RSS_PROCESSOR,"test.rss");
+		ErrorHandlerGW::add(ErrorHandlerGW::RSS_PROCESSOR,"test2.rss");
 		ErrorHandlerGW::set(ErrorHandlerGW::DIRECT_PROCESSOR);
 		$listeners = $this->handler->get_listeners();
 		
