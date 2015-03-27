@@ -1,0 +1,67 @@
+#### Readable, Complete & Secure Error-Backtrace ####
+  * full callstack, every a calle from b called from c
+  * complete Parameters List (Strings/Int/Boll & Arrays)
+  * paramerters of all login/connect/auth calls will be hidden
+
+#### Ignoring of unwanted errors ####
+Many libraries(PEAR/ADODB...)/co-developer ignore E\_NOTICE/E\_STRICT errors?
+Just set error\_reporting to E\_STRICT for YOUR files, every other part of the Library can be set to an individual errorlevel. (Blacklisting and Whitelisting supported, case-insensitive)
+
+```
+ErrorHandlerGW::ignore(array('pear'=>E_STRICT,'adodb'=>E_STRICT^E_NOTICE));
+ErrorHandlerGW::ignore(array('/myscripts/'=>E_ALL^E_STRICT,'/'=>E_ALL^E_NOTICE),'white');
+```
+
+(only one type at the time allowed, so either use whitelisting or blacklisting(default))
+
+#### Console or HTML Output ####
+Automatic detection if the output should be HTML or plain text.
+
+```
+ErrorHandlerGW::initialize(E_ALL^E_STRICT);//will add direct output, and start listening for errors
+```
+
+#### Halting the script after an error ####
+After the first error, the script can be halted, preventing any further output/file-action/database-save etc.
+
+```
+ErrorHandlerGW::report('bail');
+```
+
+#### Reporting only the first error ####
+All subsequent errors will be silenced.
+
+```
+ErrorHandlerGW::report('once');
+```
+
+#### Multiple Outputs ####
+ErrorHandler uses a Listener architecture, meaning you can have the same error in your HTML, log ,RSS and Mail.
+
+```
+ErrorHandlerGW::set('rss','/home/xx/myfeed.xml');//only use rss output
+ErrorHandlerGW::add('rss','/home/xx/myfeed.xml');//add rss output
+```
+
+
+#### Output to RSS ####
+Add every error to and RSS file, that you can subscribe from an RSSReader and always be up2date on your projects, without reading/finding logfiles.
+
+```
+ErrorHandlerGW::add('rss','/home/xx/mylog.rss');
+```
+
+#### Output to Logfiles ####
+Every Error can be send to a Logfile, where it will be added with full stack & date+time.
+
+```
+ErrorHandlerGW::add('log','/home/xx/mylog.log');
+```
+
+#### Output to Mail ####
+Every Error can be send as Mail.
+Requires: `ini_set('inlcude_path','/path/to/pear')` OR PEAR autoloader is active
+
+```
+ErrorHandlerGW::add('mail','foo@bar.com');
+```
